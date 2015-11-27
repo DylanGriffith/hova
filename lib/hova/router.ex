@@ -1,8 +1,6 @@
 defmodule Hova.Router do
   use Plug.Router
 
-  @index File.read!("./lib/templates/index.html.eex")
-
   plug :match
   plug :dispatch
 
@@ -12,7 +10,7 @@ defmodule Hova.Router do
 
   get "/" do
     :random.seed(:os.timestamp)
-    send_resp(conn, 200, EEx.eval_string(@index, paragraph: Hova.Sentence.get_paragraph))
+    send_resp(conn, 200, Hova.Template.index(Hova.Sentence.get_paragraph))
   end
 
   match _ do
