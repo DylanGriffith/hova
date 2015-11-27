@@ -1,3 +1,3 @@
 # Hova
 
-Checkout https://hova.dylangriffith.net/
+Checkout http://hova.dylangriffith.net/
