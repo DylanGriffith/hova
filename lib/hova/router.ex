@@ -9,7 +9,8 @@ defmodule Hova.Router do
   end
 
   get "/" do
-    send_resp(conn, 200, "H.O.V.A")
+    {:ok, page} = File.read("./lib/templates/index.html.eex")
+    send_resp(conn, 200, EEx.eval_string(page))
   end
 
   match _ do
