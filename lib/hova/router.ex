@@ -11,6 +11,7 @@ defmodule Hova.Router do
   end
 
   get "/" do
+    :random.seed(:os.timestamp)
     send_resp(conn, 200, EEx.eval_string(@index, paragraph: Hova.Sentence.get_paragraph))
   end
 
