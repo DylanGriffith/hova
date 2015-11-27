@@ -15,6 +15,7 @@ defmodule Hova.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :cowboy, :plug],
+    included_applications: [:eex],
      mod: {Hova, []}]
   end
 
