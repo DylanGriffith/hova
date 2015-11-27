@@ -7,6 +7,7 @@ defmodule Hova do
     import Supervisor.Spec, warn: false
 
     children = [
+      worker(Hova.Sentence, []),
       worker(Hova.Router, []),
     ]
 
