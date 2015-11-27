@@ -30,7 +30,7 @@
 
       <div class="jumbotron">
         <h1>99 Problems But An Ipsum Ain't One</h1>
-        <p class="lead"><%= Hova.Sentence.get_paragraph %></p>
+        <p class="lead"><%= paragraph %></p>
       </div>
     </div> <!-- /container -->
   </body>
